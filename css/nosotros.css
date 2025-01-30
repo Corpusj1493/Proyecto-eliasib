@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), 
+                url('../img/nosotros.avif'); /* Ajusta la ruta según corresponda */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Color café claro */
+}
+.header .nav{
+    margin-top: 10px;
+}
+
+.nav {
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content:flex-end;
+    gap: 20px;
+    background: #86858500;
+    padding: 15px;
+    position: relative;
+}
+
+.nav a {
+    color: rgb(253, 252, 252);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-style: bold;
+}
+
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre las cards */
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Estilo de las tarjetas */
+.container div {
+    color: #f5f5dcd3;
+    background-color: #ffffff18; /* Fondo blanco */
+    padding: 11px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.container div:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de los títulos */
+h1, h2 {
+    color: #1d0c00; /* Café oscuro */
+}
+
+/* Estilos de la lista */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
