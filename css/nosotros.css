@@ -6,7 +6,7 @@ body {
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
-    font-family: Arial, sans-serif;
+    font-style: oblique;
     margin: 0;
     padding: 0;
     background-color: #f5f5dc; /* Color café claro */
@@ -18,6 +18,7 @@ body {
 .nav {
     
     margin-top: 10px;
+    margin-right: 70px;
     display: flex;
     justify-content:flex-end;
     gap: 20px;
@@ -34,7 +35,7 @@ body {
 }
 
 /* Contenedor principal */
-.container {
+.container-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     gap: 20px; /* Espacio entre las cards */
@@ -44,7 +45,7 @@ body {
 }
 
 /* Estilo de las tarjetas */
-.container div {
+.container-nosotros div {
     color: #f5f5dcd3;
     background-color: #ffffff18; /* Fondo blanco */
     padding: 11px;
@@ -54,7 +55,7 @@ body {
 }
 
 /* Efecto al pasar el mouse */
-.container div:hover {
+.container-nosotros div:hover {
     transform: scale(1.05);
 }
 
@@ -70,4 +71,66 @@ ul {
 
 ul li {
     margin-bottom: 5px;
+}
+/* Estilos para la burbuja flotante */
+.contact-bubble {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /*background-color: #fff;*/
+    background-image: 
+    url('../img/datos-de-contacto_wt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*color: white;*/
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border-radius: 50%;*/
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.contact-bubble i {
+    font-size: 24px;
+}
+
+/* Efecto al pasar el mouse */
+.contact-bubble:hover {
+    transform: scale(1.1);
+}
+
+/* Tooltip con la información */
+.contact-tooltip {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    color: #4b2e19;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+.contact-bubble:hover .contact-tooltip {
+    display: block;
+}
+footer {
+    color: #f1f1f1; /* Letras en color claro para contraste */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
 }

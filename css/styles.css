@@ -5,10 +5,15 @@ body {
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
-    
+    font-style: oblique;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+    margin: 0;
 }
 .container {
-    font-style: oblique;
+    
     background: rgba(0, 0, 0, 0.274);
     padding: 20px;
     border-radius: 10px;
@@ -36,8 +41,8 @@ h2{
 }
 
 .nav {
-    
     margin-top: 10px;
+    margin-right: 70px;
     display: flex;
     justify-content:flex-end;
     gap: 20px;
@@ -70,4 +75,67 @@ h2{
 .menu-item img {
     width: 100%;
     border-radius: 10px;
+}
+/* Estilos para la burbuja flotante */
+.contact-bubble {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /*background-color: #fff;*/
+    background-image: 
+    url('../img/datos-de-contacto_wt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*color: white;*/
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border-radius: 50%;*/
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.contact-bubble i {
+    font-size: 24px;
+}
+
+/* Efecto al pasar el mouse */
+.contact-bubble:hover {
+    transform: scale(1.1);
+}
+
+/* Tooltip con la información */
+.contact-tooltip {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    color: #4b2e19;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+.contact-bubble:hover .contact-tooltip {
+    display: block;
+}
+
+footer {
+    color: #f1f1f1; /* Letras en color claro para contraste */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
 }
